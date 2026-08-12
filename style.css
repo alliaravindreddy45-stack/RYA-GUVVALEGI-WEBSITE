@@ -120,23 +120,7 @@ button {
 }
 
 
-.logo-placeholder {
-    width: 48px;
-    height: 48px;
 
-    display: grid;
-    place-items: center;
-
-    border: 1px solid var(--gold);
-
-    color: var(--gold);
-
-    font-family: "Playfair Display", serif;
-    font-size: 22px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
 
 
 .logo-text {
