@@ -279,7 +279,7 @@ const adminContents = document.querySelectorAll('.admin-content');
 // =========================================================
 
 const manageGalleryBtn = document.getElementById('manageGalleryBtn');
-const passwordDialog = document.getElementById('passwordDialog');
+const passwordDialog = document.getElementById('passwordDialogOverlay');
 const adminPasswordInput = document.getElementById('adminPassword');
 const passwordSubmitBtn = document.getElementById('passwordSubmitBtn');
 const passwordCancelBtn = document.getElementById('passwordCancelBtn');
