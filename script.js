@@ -61,7 +61,7 @@ const SUPABASE_ANON_KEY = 'sb_publishable_0QDZe1D94xwnDVwjg4vOXg__9th4tmI';
 
 // Initialize Supabase client
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
+alert("RYA GALLERY SCRIPT IS RUNNING");
 // Gallery state
 let galleryPhotos = [];
 let galleryVideos = [];
