@@ -1868,3 +1868,75 @@ button {
     }
 
 }
+/* =========================================================
+   GALLERY PASSWORD DIALOG
+   ========================================================= */
+
+.password-dialog-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.password-dialog-overlay.show {
+    display: flex;
+}
+
+.password-dialog {
+    width: min(420px, 100%);
+    background: #16080c;
+    border: 1px solid #c9a227;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.password-dialog h3 {
+    color: #f1d27a;
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.password-dialog p {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.password-dialog input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid #8f7420;
+    border-radius: 8px;
+    background: #0d0507;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.password-dialog-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.password-dialog-buttons button {
+    padding: 11px 22px;
+    border-radius: 8px;
+    border: 1px solid #c9a227;
+    background: #c9a227;
+    color: #16080c;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.password-dialog-buttons button:hover {
+    opacity: 0.85;
+}
