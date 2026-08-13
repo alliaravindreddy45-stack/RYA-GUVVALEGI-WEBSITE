@@ -54,7 +54,7 @@ navigationLinks.forEach(function (link) {
 // =========================================================
 // SUPABASE CONFIGURATION
 // =========================================================
-
+alert("SCRIPT IS RUNNING");
 // IMPORTANT: Replace with your actual Supabase credentials
 const SUPABASE_URL = 'https://ymnmjosntkixqqeyekst.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_0QDZe1D94xwnDVwjg4vOXg__9th4tmI';
