@@ -278,20 +278,24 @@ const adminContents = document.querySelectorAll('.admin-content');
 // MANAGE GALLERY BUTTON
 // =========================================================
 
-const manageGalleryBtn = document.getElementById('manageGalleryBtn');
-const passwordDialog = document.getElementById('passwordDialogOverlay');
-const adminPasswordInput = document.getElementById('adminPassword');
-const passwordSubmitBtn = document.getElementById('passwordSubmitBtn');
-const passwordCancelBtn = document.getElementById('passwordCancelBtn');
+// MANAGE GALLERY BUTTON
+document.addEventListener('click', function (e) {
+    const button = e.target.closest('#manageGalleryBtn');
 
+    if (!button) return;
 
-// Open password dialog
-manageGalleryBtn.addEventListener('click', function () {
-    passwordDialog.classList.add('show');
-    adminPasswordInput.value = '';
-    adminPasswordInput.focus();
+    const passwordDialog = document.getElementById('passwordDialogOverlay');
+    const adminPasswordInput = document.getElementById('adminPassword');
+
+    if (passwordDialog) {
+        passwordDialog.classList.add('show');
+    }
+
+    if (adminPasswordInput) {
+        adminPasswordInput.value = '';
+        adminPasswordInput.focus();
+    }
 });
-
 
 // Cancel password dialog
 passwordCancelBtn.addEventListener('click', function () {
