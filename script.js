@@ -274,7 +274,57 @@ document.addEventListener('keydown', (e) => {
 const adminPanelOverlay = document.getElementById('adminPanelOverlay');
 const adminTabs = document.querySelectorAll('.admin-tab');
 const adminContents = document.querySelectorAll('.admin-content');
+// =========================================================
+// MANAGE GALLERY BUTTON
+// =========================================================
 
+const manageGalleryBtn = document.getElementById('manageGalleryBtn');
+const passwordDialog = document.getElementById('passwordDialog');
+const adminPasswordInput = document.getElementById('adminPassword');
+const passwordSubmitBtn = document.getElementById('passwordSubmitBtn');
+const passwordCancelBtn = document.getElementById('passwordCancelBtn');
+
+
+// Open password dialog
+manageGalleryBtn.addEventListener('click', function () {
+    passwordDialog.classList.add('show');
+    adminPasswordInput.value = '';
+    adminPasswordInput.focus();
+});
+
+
+// Cancel password dialog
+passwordCancelBtn.addEventListener('click', function () {
+    passwordDialog.classList.remove('show');
+    adminPasswordInput.value = '';
+});
+
+
+// Submit password
+passwordSubmitBtn.addEventListener('click', function () {
+
+    const password = adminPasswordInput.value.trim();
+
+    if (!password) {
+        alert('Please enter the admin password.');
+        return;
+    }
+
+    adminPassword = password;
+
+    passwordDialog.classList.remove('show');
+    adminPanelOverlay.classList.add('show');
+
+    loadAdminMedia();
+});
+
+
+// Enter key submits password
+adminPasswordInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        passwordSubmitBtn.click();
+    }
+});
 
 // Check for admin access (keyboard shortcut: Ctrl+Shift+A)
 document.addEventListener('keydown', (e) => {
@@ -285,14 +335,9 @@ document.addEventListener('keydown', (e) => {
 
 
 function showAdminPanel() {
-    // Simple password protection (in production, use proper authentication)
-    const password = prompt('Enter admin password:');
-    if (!password) return;
-    
-    // Store for this session
-    adminPassword = password;
-    adminPanelOverlay.classList.add('show');
-    loadAdminMedia();
+    passwordDialog.classList.add('show');
+    adminPasswordInput.value = '';
+    adminPasswordInput.focus();
 }
 
 
