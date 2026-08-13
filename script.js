@@ -57,7 +57,7 @@ navigationLinks.forEach(function (link) {
 
 // IMPORTANT: Replace with your actual Supabase credentials
 const SUPABASE_URL = 'https://ymnmjosntkixqqeyekst.supabase.co';
-const SUPABASE_ANON_KEY = 'YOUR_PUBLISHABLE_API_KEY_HERE'; // Replace with your key
+const SUPABASE_ANON_KEY = 'sb_publishable_0QDZe1D94xwnDVwjg4vOXg__9th4tmI';
 
 // Initialize Supabase client
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
