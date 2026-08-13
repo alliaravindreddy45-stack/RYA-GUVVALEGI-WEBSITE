@@ -278,13 +278,129 @@
     
 
 
+        <!-- ================= GALLERY SECTION ================= -->
 
-        <section id="gallery" class="placeholder-section">
-            <div>
-                <span>SECTION 07</span>
+        <section id="gallery" class="gallery-section">
+            <div class="gallery-inner">
+                <span class="gallery-label">SECTION 07</span>
                 <h2>Gallery</h2>
+
+                <!-- GALLERY TABS -->
+                <div class="gallery-tabs">
+                    <button class="gallery-tab active" data-tab="photos">
+                        <span>📸</span> PHOTOS
+                    </button>
+                    <button class="gallery-tab" data-tab="videos">
+                        <span>🎬</span> VIDEOS
+                    </button>
+                </div>
+
+                <!-- PHOTOS TAB -->
+                <div class="gallery-content active" id="photos-tab">
+                    <div class="gallery-grid" id="photosGrid">
+                        <!-- Dynamically loaded from Supabase -->
+                    </div>
+                </div>
+
+                <!-- VIDEOS TAB -->
+                <div class="gallery-content" id="videos-tab">
+                    <div class="gallery-grid" id="videosGrid">
+                        <!-- Dynamically loaded from Supabase -->
+                    </div>
+                </div>
+
             </div>
         </section>
+
+        <!-- PHOTO LIGHTBOX -->
+        <div class="lightbox" id="photoLightbox">
+            <div class="lightbox-content">
+                <button class="lightbox-close">&times;</button>
+                <button class="lightbox-nav lightbox-prev">❮</button>
+                <div class="lightbox-image-container">
+                    <img id="lightboxImage" src="" alt="">
+                </div>
+                <button class="lightbox-nav lightbox-next">❯</button>
+                <div class="lightbox-counter">
+                    <span id="lightboxCounter">1 / 1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIDEO LIGHTBOX -->
+        <div class="lightbox" id="videoLightbox">
+            <div class="lightbox-content">
+                <button class="lightbox-close">&times;</button>
+                <div class="lightbox-video-container">
+                    <video id="lightboxVideo" controls style="width: 100%; height: 100%; object-fit: contain;">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADMIN PANEL (Hidden by default, password protected) -->
+        <div class="admin-panel-overlay" id="adminPanelOverlay">
+            <div class="admin-panel">
+                <button class="admin-close">&times;</button>
+                
+                <div class="admin-panel-header">
+                    <h3>RYA Gallery Admin</h3>
+                    <p>Upload and manage gallery media</p>
+                </div>
+
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-admin-tab="upload">Upload Media</button>
+                    <button class="admin-tab" data-admin-tab="manage">Manage Media</button>
+                </div>
+
+                <!-- UPLOAD TAB -->
+                <div class="admin-content active" id="upload-tab">
+                    <div class="admin-section">
+                        <h4>Upload Photo</h4>
+                        <div class="upload-box" id="photoUploadBox">
+                            <input type="file" id="photoInput" accept="image/*" style="display:none">
+                            <p>Click to select or drag a photo</p>
+                            <small>(JPG, PNG, WebP)</small>
+                        </div>
+                        <div class="upload-progress" id="photoProgress" style="display:none;">
+                            <div class="progress-bar" id="photoProgressBar"></div>
+                            <span id="photoProgressText">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-section">
+                        <h4>Upload Video</h4>
+                        <div class="upload-box" id="videoUploadBox">
+                            <input type="file" id="videoInput" accept="video/mp4,video/webm" style="display:none">
+                            <p>Click to select or drag a video</p>
+                            <small>(MP4, WebM)</small>
+                        </div>
+                        <div class="upload-progress" id="videoProgress" style="display:none;">
+                            <div class="progress-bar" id="videoProgressBar"></div>
+                            <span id="videoProgressText">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MANAGE TAB -->
+                <div class="admin-content" id="manage-tab">
+                    <div class="admin-section">
+                        <h4>Manage Photos</h4>
+                        <div class="media-list" id="photosList">
+                            <!-- Dynamically loaded -->
+                        </div>
+                    </div>
+
+                    <div class="admin-section">
+                        <h4>Manage Videos</h4>
+                        <div class="media-list" id="videosList">
+                            <!-- Dynamically loaded -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <section id="join-rya" class="placeholder-section">
@@ -371,6 +487,9 @@
     </footer>
 
 
+
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.38.4/dist/module/index.min.js"></script>
 
     <script src="script.js"></script>
 
