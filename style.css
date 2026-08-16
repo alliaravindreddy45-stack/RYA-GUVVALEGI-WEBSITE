@@ -1940,100 +1940,316 @@ button {
 .password-dialog-buttons button:hover {
     opacity: 0.85;
 }
-/* ================================
-   MOBILE FIT — RYA WEBSITE
-================================ */
+/* =========================================================
+   RYA — FINAL MOBILE WIDTH FIX
+   ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
     html,
     body {
         width: 100%;
         max-width: 100%;
-        margin: 0;
-        padding: 0;
         overflow-x: hidden;
     }
 
-    * {
-        box-sizing: border-box;
+    main {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    /* Main sections */
-    section,
-    .section,
-    .container,
-    .content,
-    .about,
-    .mission,
-    .events,
-    .contact {
+    /* =========================
+       OUR STORY
+       ========================= */
+
+    .story-section {
         width: 100% !important;
         max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden;
     }
 
-    /* Remove desktop two-column layout */
-    .about,
-    .mission,
-    .events,
-    .contact,
-    .section-content,
-    .content-wrapper {
+    .story-poster {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .story-poster img {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+
+    /* =========================
+       ABOUT + MISSION
+       ========================= */
+
+    .placeholder-section {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        padding: 70px 20px !important;
+
         display: block !important;
+        overflow: hidden;
+    }
+
+    .placeholder-section > div {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .placeholder-section h2 {
+        font-size: 42px;
+        line-height: 1.05;
+        margin-bottom: 20px;
+    }
+
+    .placeholder-section p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.65;
+        margin-bottom: 14px;
+    }
+
+
+    /* =========================
+       WHAT WE DO + EVENTS
+       ========================= */
+
+    .content-section {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 70px 20px !important;
+
+        overflow: hidden;
+    }
+
+    .section-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .content-section h2 {
+        font-size: 42px;
+        line-height: 1.05;
+        margin-bottom: 20px;
+    }
+
+    .content-section p {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 14px;
+        line-height: 1.65;
+
+        margin-bottom: 14px;
+    }
+
+
+    /* =========================
+       EVENT POSTERS
+       ========================= */
+
+    .event-posters {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 30px 0 0 !important;
+
+        padding: 0 !important;
+
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 20px !important;
+
+        overflow: hidden;
+    }
+
+    .event-poster {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        border-radius: 10px;
+    }
+
+    .event-poster img {
+        display: block;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        object-fit: contain;
+    }
+
+
+    /* =========================
+       GALLERY
+       ========================= */
+
+    .gallery-section {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 70px 20px !important;
+
+        overflow: hidden;
+    }
+
+    .gallery-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+    }
+
+    .gallery-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+
         grid-template-columns: 1fr !important;
     }
 
-    /* Text areas */
-    section > div,
-    .section-content > div,
-    .content-wrapper > div {
+
+    /* =========================
+       JOIN RYA
+       ========================= */
+
+    .join-section {
         width: 100% !important;
         max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 70px 20px !important;
+
+        overflow: hidden;
     }
 
-    /* Images / posters */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-    .events img,
-    .gallery img,
-    .event-card img {
+    .join-inner {
         width: 100% !important;
         max-width: 100% !important;
-        height: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .join-content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: block !important;
+    }
+
+    .join-description {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .join-poster {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 30px 0 0 !important;
+    }
+
+    .join-poster img {
         display: block;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
     }
 
-    /* Prevent text from being cut on left/right */
-    h1,
-    h2,
-    h3,
-    p {
+
+    /* =========================
+       CONTACT
+       ========================= */
+
+    .contact-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .contact-intro {
+        width: 100%;
         max-width: 100%;
-        overflow-wrap: break-word;
+
+        font-size: 14px;
+        line-height: 1.65;
     }
 
-    /* Mobile section spacing */
-    section {
-        padding-left: 18px !important;
-        padding-right: 18px !important;
+    .contact-details {
+        width: 100%;
+        max-width: 100%;
     }
 
-    /* Header */
-    header,
-    nav,
-    .navbar {
+    .contact-item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .site-footer {
         width: 100% !important;
         max-width: 100% !important;
+
+        padding: 60px 20px 25px !important;
+
+        overflow: hidden;
     }
 
-    /* Footer */
-    footer {
+    .footer-inner {
         width: 100% !important;
         max-width: 100% !important;
+
+        margin: 0 !important;
+
+        grid-template-columns: 1fr !important;
+    }
+
+    .copyright {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
     }
 }
