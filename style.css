@@ -1940,3 +1940,100 @@ button {
 .password-dialog-buttons button:hover {
     opacity: 0.85;
 }
+/* ================================
+   MOBILE FIT — RYA WEBSITE
+================================ */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Main sections */
+    section,
+    .section,
+    .container,
+    .content,
+    .about,
+    .mission,
+    .events,
+    .contact {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Remove desktop two-column layout */
+    .about,
+    .mission,
+    .events,
+    .contact,
+    .section-content,
+    .content-wrapper {
+        display: block !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Text areas */
+    section > div,
+    .section-content > div,
+    .content-wrapper > div {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Images / posters */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .events img,
+    .gallery img,
+    .event-card img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+
+    /* Prevent text from being cut on left/right */
+    h1,
+    h2,
+    h3,
+    p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    /* Mobile section spacing */
+    section {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    /* Header */
+    header,
+    nav,
+    .navbar {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Footer */
+    footer {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
